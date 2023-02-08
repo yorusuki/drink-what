@@ -1,0 +1,429 @@
+/* block > box */
+@font-face {
+    font-family: "Cubic 11";
+    src: url('../font/Cubic_11_1.013_R.woff2') format('woff2');
+    font-display: swap;
+}
+
+body {
+    font-family: "Cubic 11", serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    /*background-color: rgba(136, 136, 136, 0.03);*/
+}
+
+.top-box, .bottom-box {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.lottery-block {
+    width: 65vw;
+    height: 60vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lottery-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+}
+
+.list-block {
+    width: 25vw;
+    height: 60vh;
+    padding: 5px;
+    display: flex;
+}
+
+.win-block {
+    width: 30vw;
+    height: 30vh;
+    padding: 5px;
+    display: flex;
+}
+
+.free-block {
+    width: 35vw;
+    height: 30vh;
+    padding: 5px;
+    display: flex;
+}
+
+.logo-block {
+    width: 25vw;
+    height: 30vh;
+    padding: 5px;
+    display: flex;
+}
+
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 96%;
+    background-color: rgba(128, 128, 128, 0.75);
+    height: 1px;
+}
+
+.lottery-block > div,
+.win-block > div,
+.list-block > div,
+.logo-block > div {
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 7px 1px #b1c3ff;
+    /*border-style: dashed;*/
+    /*border-width: 1px;*/
+    /*background-color: antiquewhite;*/
+    background-color: rgba(219, 242, 255, 0.2);
+}
+
+
+.lottery-item-box {
+    /*border-width: 1px;*/
+    /*border-style: dashed;*/
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.lotteryItems {
+    padding: 10px;
+    margin: 10px;
+    width: 5vw;
+    height: 5vw;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -moz-box-orient: vertical;
+    -webkit-user-drag: none;
+    /*動畫待補*/
+    /*-webkit-animation: createItem .6s linear .6s;*/
+}
+
+.lotteryItems > img {
+    -webkit-user-drag: none;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.lotteryCItemImg {
+    -webkit-user-drag: none;
+}
+
+.lotteryItemImg:hover {
+    /*-webkit-animation: hoverBox .6s linear .6s ;*/
+    animation-name: hoverBox;
+    animation-direction: inherit;
+    animation-timing-function: ease-in-out;
+    animation-duration: .6s;
+    animation-iteration-count: 1;
+}
+
+
+.list-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-box > select {
+    font-family: "Cubic 11", serif;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 90%;
+    font-size: 1.3em;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.list-action {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.list-create-award {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#logo-img {
+    border-radius: 20px;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.form-select {
+    border-radius: 0px;
+}
+
+/*.btn:focus, .btn:active:focus,*/
+.form-select:focus, textarea:focus {
+    /* 消除bs按鈕的框框 */
+    box-shadow: none !important;
+    outline: #00000000;
+
+}
+
+button {
+    text-align: center;
+    background-color: #00000000;
+    border-style: initial;
+    border-width: 1px;
+    border-radius: 7px;
+    padding: 7px;
+    box-shadow: 1px 1px 2px 1px #c0d7ff;
+    font-family: "Cubic 11", sans-serif;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 20%;
+    outline: #00000000;
+}
+
+button:hover {
+    background-color: rgba(155, 252, 255, 0.1);
+}
+
+button:active {
+    box-shadow: -.7px 0 2px 0 #6ca1ff;;
+}
+
+button:visited {
+    box-shadow: 1px 1px 2px 1px #888;
+}
+
+/*標題用*/
+.win-title, .list-title, .lottery-title {
+    font-size: 2.0em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.win-box {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.win-box > textarea {
+    font-family: "Cubic 11", sans-serif;
+    /*font-size: 1.2em;*/
+    background-color: #00000000;
+    width: 90%;
+    height: 85%;
+}
+
+.win-box > button {
+    background-color: rgba(255, 192, 203, 0.44);
+    box-shadow: 1px 1px 2px 1px rgb(255, 201, 201);
+}
+
+.win-box > button:hover {
+    background-color: rgba(255, 192, 203, 0.6);
+}
+
+.win-box > button:active {
+    box-shadow: -1px -1px 2px rgb(255, 138, 138);
+}
+
+#win-textarea {
+    background-color: #00000000;
+    resize: none;
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.65em;
+    color: #333333;
+}
+
+@-webkit-keyframes createItem {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes hoverBox {
+    0% {
+        transform: translateY(0%);
+    }
+    30% {
+        transform: translateY(-10%);
+        /*margin-bottom: 3vh;*/
+        /*border-bottom-right-radius: 5vw;*/
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    80% {
+        transform: translateY(-15%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    width: 50%;
+    background: #f1f1f1;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 50%;
+    background: #888;
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.loading-block {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000025;
+    position: absolute;
+}
+
+.loading-box {
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-box > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.loading-text {
+    color: black;
+    font-size: 2.1em;
+    animation: bounce 0.5s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+    display: inline-block;
+    transform: translate3d(0, 0, 0);
+}
+
+.loading-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading-text:nth-child(2) {
+    animation-delay: 0.06s;
+}
+
+.loading-text:nth-child(3) {
+    animation-delay: 0.12s;
+}
+
+.loading-text:nth-child(4) {
+    animation-delay: 0.18s;
+}
+
+.loading-text:nth-child(5) {
+    animation-delay: 0.24s;
+}
+
+.loading-text:nth-child(6) {
+    animation-delay: 0.30s;
+}
+
+.loading-text:nth-child(7) {
+    animation-delay: 0.36s;
+}
+
+@keyframes bounce {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -1em, 0);
+    }
+}
+
+.hide-bg-block {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide-bg-block > img {
+    width: 95%;
+    height: 95%;
+    opacity: 0.015;
+    margin: 10px;
+    object-fit: contain;
+}
+
+#hide-bg {
+    border-radius: 500px;
+}
+
+@media screen and (min-width: 600px) {
+}
+
+@media screen and (min-width: 960px) {
+}

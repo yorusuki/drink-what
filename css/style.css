@@ -265,6 +265,11 @@ button:visited {
 }
 
 #win-textarea {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 90%;
+    height: 70%;
     background-color: #00000000;
     resize: none;
     padding: 10px;
@@ -274,6 +279,12 @@ button:visited {
     border: 1px solid #ccc;
     text-align: center;
     font-size: 1.65em;
+    color: #333333;
+    overflow: auto;
+}
+
+#win-textarea > a{
+    text-decoration:none;
     color: #333333;
 }
 
